@@ -44,3 +44,4 @@ plt.figure()
 plt.imshow(alice_mask, cmap=plt.cm.gray, interpolation='bilinear')
 plt.axis("off")
 plt.show()
+#你好呀
