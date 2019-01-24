@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show movie list here</title>
+    <link rel="icon" type="imag/x-icon" href="{{ url_for("static",filename='666.gif') }}" >
+</head>
+<body>
+<h1>Hello world!my friend.</h1>
+<br>
+<form method="post" action="{{ url_for("result") }}">
+    {{ form.csrf_token }}
+    {{ form.username.label }}
+    {{ form.username }}
+    {% for message in form.username.errors %}
+    <small class="error" >{{ message }}</small>
+    {% endfor %}
+    {{ form.password.label }}
+    {{ form.password }}
+    {% for message in form.password.errors %}
+    <small class="error" >{{ message }}</small>
+    {% endfor %}
+
+    {{ form.remeber }}
+    {{ form.submit }}
+
+
+</form>
+
+
+
+</body>
+</html>

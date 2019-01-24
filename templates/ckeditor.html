@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ckeditor</title>
+    {% from 'macros.html' import form_field%}
+</head>
+<body>
+
+
+<form method="post" action="{{ url_for("myCkeditor") }}">
+    {{ form.csrf_token }}
+{{ form_field(form.title) }}
+    {{ form_field(form.body) }}
+     {{ form.submit}}
+</form>
+{#{% block scripts %}#}
+{#{{ super() }}#}
+{{ ckeditor.load() }}
+{#{% endblock %}#}
+
+</body>
+</html>

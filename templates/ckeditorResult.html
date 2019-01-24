@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show result</title>
+{#    {{ ckeditor.load() }}#}
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+
+</head>
+<body>
+<h1>显示的内容如下</h1>
+按照课时来吧，不能一下子学完了。
+{{ result |safe}}
+</body>
+</html>

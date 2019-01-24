@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>falsh</title>
+</head>
+<body>
+
+{% for message in get_flash_messages() %}
+
+<div class ="alert">{{ message }}</div>
+{% endfor %}
+
+</body>
+</html>
